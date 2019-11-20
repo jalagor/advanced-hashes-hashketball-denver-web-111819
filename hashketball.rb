@@ -104,19 +104,22 @@ def game_hash
   } 
 end
 
+#def num_points_scored(player)
+  #game_hash.each do |side, roster|
+    #roster.each do |category, statistic|
+    # if category == :players 
+       #statistic.each do |name| 
+       # if name[:player_name] == player 
+      #    return name[:points].to_i
+     #     end
+    #   end
+   #   end
+  # end
+ # end
+#end  
 def num_points_scored(player)
-  game_hash.each do |side, roster|
-    roster.each do |category, statistic|
-     if category == :players 
-       statistic.each do |name| 
-        if name[:player_name] == player 
-          return name[:points].to_i
-          end
-       end
-      end
-   end
-  end
-end 
+  game_hash.dig(k, v, n, player)
+end
  
  
 def shoe_size(player)
